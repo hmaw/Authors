@@ -1,0 +1,25 @@
+
+<button [routerLink]="['all']"> Go to Home</button>
+<br>
+
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Author</th>
+        <th scope="col">Actions available</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let author of authors">
+      <tr>
+        <td> {{author.name}}</td>
+        <td><button class="btn btn-outline-success float-right" [routerLink]="['/edit', author._id]">Edit</button> 
+          <button class="btn btn-outline-danger float-right" (click)=delAuthor(author._id)>Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- TODO fix the for loop
+
+  <button class="btn btn-outline-success float-right" (click)="displaySingleTask(task)">Edit Stuff!</button>
+  <button class="btn btn-outline-danger float-right" (click)="delTask(task._id)">Delete!</button> -->

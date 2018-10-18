@@ -1,0 +1,10 @@
+
+  <div *ngIf="newAuthor" class="form-group border border-secondary rounded col-xs-6">
+      <form (submit)="onSubmit()"> 
+        <p> {{ newAuthor | json }} </p>
+        <p>Author's Name:</p>
+        <input type="text" class="form-control" name="newAuthor.name" [(ngModel)]="newAuthor.name" />
+        <button [routerLink]="['/all']">Cancel</button>
+        <input type="submit" value="Add Name" />
+      </form>
+    </div>

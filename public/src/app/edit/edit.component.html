@@ -1,0 +1,12 @@
+<div *ngIf="author" class="form-group col-6 rounded border border-secondary" style="width: 500px">
+  <h4>Edit An Author</h4>
+  <div class="form-group">
+    <form (submit)="onSubmit()">
+      <p> {{ author.name | json }} {{ author | json }}</p>
+      <p>Name:</p><input type="text" class="form-control" name="author.name" [(ngModel)]="author.name" />
+
+      <input type="submit" class='btn btn-primary mx-2' value="Edit Task!" />
+
+    </form>
+  </div>
+</div>
